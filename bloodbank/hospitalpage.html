@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="nav.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        h1{
+            margin-top: -75px;
+            font-size: 50px;
+            font-weight: bold;
+            margin-left: 180px;
+        }
+        h2{
+            color: red;
+        }
+        .stock{
+    height: 440px;
+    width: 880px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 100px ;
+    margin-left: 340px;
+    font-size: 15px;
+}
+    </style>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="image/hospital3.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Hospital</span>
+                    <span class="profession">Labarotory</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar"> 
+            <div class="menu">
+
+
+                <ul class="menu-links">
+                                    <li class="nav-link">
+                    <a href="hprofile.php">
+                        <i class='bx bx-user icon' ></i>
+                        <span class="text nav-text">Account</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="bloodinfo.php">
+                        <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                        <span class="text nav-text">Blood Stock</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="deleteit.php">
+                        <i class='bx bx-pie-chart-alt icon' ></i>
+                        <span class="text nav-text">Request Blood</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="sentrequestd.php">
+                        <i class='bx bx-heart icon' ></i>
+                        <span class="text nav-text">Request Status</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="bloodrequest.php">
+                        <i class='bx bx-bell icon'></i>
+                        <span class="text nav-text">Request from Patient</span>
+                    </a>
+                </li>
+                
+                <li class="nav-link">
+                    <a href="logout.php">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                </ul>
+                <br> <br> <br>
+                <div class="ast-small-footer-section ast-small-footer-section-2" style="font-size: 9px;">
+                   Copyright © 2022 Designed and Developed by GEC Karwar					
+                </div>
+            </div>
+
+            <div class="bottom-content">
+               
+                
+            </div>
+        </div>
+
+    </nav> 
+
+    <section class="home">
+        <div class="text">Hospital Management</div>
+    </section>
+
+   
+
+    <section class="stock"> <br>
+        <div>
+            <p ><h2 style="color: red;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; General Guidelines for Blood Centres</h2> &emsp;
+                 <hr> <br>
+                <p> &emsp;🩸
+                    All blood banks should be licensed by <span style="color: red; font-weight: bold;">State Drug Controller and approved by Drugs Controller General India.</span>
+                </p>
+                <br>
+                <p> &emsp;🩸
+                    All blood banks should have <span style="color: red; font-weight: bold;"> Quality Policy and Prepare Quality Manual.</span>
+                </p>
+                <br>
+                <p> &emsp;🩸
+                    It should be regulated by <span style="color: red; font-weight: bold;"> Drug and Cosmetics Act</span> and rules there under.
+                </p>
+                <br>
+                <p> &emsp;🩸
+                    Each blood bank should maintain a detailed  <span style="color: red; font-weight: bold;"> SOP Manual</span> as well as records(forms, registers, labels) in a <br> &emsp; &emsp; prescribed formate by <span style="color: red; font-weight: bold;">  Drug and Cosmetrics Rules.</span>
+                </p>
+                <br>
+                <p> &emsp;🩸
+                    The  <span style="color: red; font-weight: bold;"> Blood Transfusion Services</span> should be established in accordance to <span style="color: red; font-weight: bold;">  National Blood Policy</span> and plan within <br> &emsp; &emsp; the legislative framework.
+                </p>
+                <br>
+                <p> &emsp;🩸
+                    The blood bank should function under the direction of licensed physician by training and experience as <span style="color: red; font-weight: bold;"> <br> &emsp; &emsp;Transfusion Medicine Specialist.</span>
+                </p>
+                <br>
+               
+                
+                
+            </div>
+            </p>
+        </div>
+    </section>
+  
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+</body>
+</html>
+
+
+
